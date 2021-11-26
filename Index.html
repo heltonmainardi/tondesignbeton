@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>IARA</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="preload" as="image" href="img/IARA_color_black.png">
+		<link rel="preload" as="image" href="img/IARA_color_50.png">
+		<link rel="preload" as="image" href="img/IARA_color_70.png">
+		<link rel="preload" as="image" href="img/IARA_color_sand.png">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/observers.js" defer></script>
+		<script type="text/javascript">
+			document.addEventListener("mousemove", parallax);
+			function parallax(e){
+			  document.querySelectorAll("#object").forEach(function(move){
+		
+				var moving_value = move.getAttribute("data-value");
+				var x = (e.clientX * moving_value) / 50;
+				var y = (e.clientY * moving_value) / 50;
+		
+				move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+			  });
+			}
+
+			$(document).ready(function(){
+
+				$('#nav-icon1').click(function(){
+					$('#nav').toggleClass('navopen');
+					});
+
+				$('#overlay').click(function(){
+					$('#nav').toggleClass('navopen');
+				});
+
+				let menubtns=document.querySelectorAll('#menubtn');
+				for(let i=0; i < menubtns.length; i++){
+    				menubtns[i].addEventListener('click',function(){
+        				$('#nav').toggleClass('navopen');
+    				})
+				}
+
+			});			
+			
+		</script>		
+	</head>
+
+	<body>
+		
+		<header>
+
+			<nav id="nav">
+
+				<div id="navbar">
+
+					<ul class="nav-language">
+						<label id="nav-icon1" class="menu-btn">
+							<span></span>
+							<span></span>
+							<span></span>
+						</label>
+
+						<a href="#" class="lang-btn" id="lang-active">EN</a>
+						<a href="#" class="lang-btn">FR</a>
+						<a href="#" class="lang-btn">PT</a>
+					</ul>
+			
+					<img src="img/logo_ton.svg" alt="" class="nav-logo">
+			
+					<div class="logo-tag">CONCRETE DESIGN</div>
+
+					<div id="dropbar-container">
+						<div class="dropbar">
+							<div class="navigation">
+								<h6>NAVIGATION</h6><br>
+								<a href="#top" id="menubtn">IARA</a><br>
+								<a href="#gallery" id="menubtn">GALLERY</a><br>
+								<a href="#dimensions" id="menubtn">DIMENSIONS</a><br>
+								<a href="#concrete" id="menubtn">CONCRETE</a><br>
+								<a href="#manu" id="menubtn">MANUFACTURING</a>
+							</div>
+							<div class="more">
+								<h6>MORE</h6><br>
+								<a href="#" id="menubtn">ABOUT US</a><br>
+								<a href="#" id="menubtn">CONTACT</a>
+								
+							</div>
+							<div class="email">
+								<div>
+									<h6>EMAIL</h6><br>
+									<a href="#" id="menubtn">info@tondesign.com</a>
+								</div>
+								<div class="social">
+									<img src="img/icon_linkedin_white.svg" alt="">
+									<img src="img/icon_youtube_white.svg" alt="">
+									<img src="img/icon_pinterest_white.svg" alt="">
+									<img src="img/icon_instagram_white.svg" alt="">
+									<img src="img/icon_facebook_white.svg" alt="">
+								</div>
+							</div>
+						</div>				
+						
+					</div>
+				
+				</div>
+
+				<div id="overlay"></div>	
+		
+			</nav>
+
+		</header>
+
+		<div class="container-3d">
+
+			<section class="parallax-wrapper">
+				
+				<video src="img/IARA_1080p.mp4" muted autoplay></video>
+
+				<div class="content">
+
+					<div class="title-container">
+
+						<div class="product-name">
+							<h1>IARA</h1>
+						</div>
+
+						<div class="product-tag">
+							<h4>CONCRETE WASHBASIN</h4>
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>	
+
+			<section class="product-description" id="top">
+
+				<div class="title">
+					<h5>Wall-mounted Washbasin</h5>			
+				</div>
+
+				<div class="imgtop">
+					<img src="img/IARA_topview.png" alt="">
+				</div>
+				<!-- data-aos="fade-right" -->
+				<div class="text" >
+					<p>Iara, also called lady of the waters, is a Tupi-Guarani goddess (indigenous ethnicity from northern Brazil) who lives in the depths of the Amazon River and attracts men through her beauty and riches. She will be the main feature in any space.</p>
+				</div>
+				
+			</section>
+			
+			<section class="slider-container" id="gallery">
+
+				<div id="slider">
+					<input type="radio" name="slider" id="slide1" checked>
+					<input type="radio" name="slider" id="slide2">
+					<input type="radio" name="slider" id="slide3">
+					<input type="radio" name="slider" id="slide4">
+					<div id="slides">
+					   <div id="overflow">
+						  <div class="inner">
+							 <div class="slide slide_1">
+								<img src="img/IARA_life_01.jpg" class="img-slider" id="object" data-value="-2" alt="">
+								<!-- <div class="slide-content"></div> -->
+							 </div>
+							 <div class="slide slide_2">
+								<img src="img/IARA_life_02.jpg" class="img-slider" id="object" data-value="-2" alt="">
+								<!-- <div class="slide-content"></div> -->
+							 </div>
+							 <div class="slide slide_3">
+								<img src="img/IARA_life_03.jpg" class="img-slider" id="object" data-value="-2" alt="">
+								<!-- <div class="slide-content"></div> -->
+							 </div>
+							 <div class="slide slide_4">
+								<img src="img/IARA_life_04.jpg" class="img-slider" id="object" data-value="-2" alt="">
+								<!-- <div class="slide-content"></div> -->
+							 </div>
+						  </div>
+					   </div>
+					</div>
+					<div id="controls">
+					   <label for="slide1"></label>
+					   <label for="slide2"></label>
+					   <label for="slide3"></label>
+					   <label for="slide4"></label>
+					</div>
+					<div id="bullets">
+					   <label for="slide1"></label>
+					   <label for="slide2"></label>
+					   <label for="slide3"></label>
+					   <label for="slide4"></label>
+					</div>
+				 </div>
+
+			</section>
+
+			<section class="product-dimensions" id="dimensions">
+
+				<div class="box-title">
+					<h5>customizable length</h5>			
+				</div>
+
+				<div class="text">
+					<p>Palatial, measuring 22” wide, 4” profile and customizable length between 67” and 100”, Iara surprises for being a rough piece of solid concrete floating on the wall.<br>This is possible thanks to the ECONCRETE technology.</p>
+				</div>
+
+				<div class="imgfront">
+					
+					<div class="ghost-btn"></div>
+					<div class="ghost-dim"></div>
+
+					<div class="dimensions">
+						<i class="arrow aleft"></i>
+						<div class="line-dimension"></div>
+						<i class="arrow aright"></i>
+						67" ~ 100"( 170cm ~ 254cm )
+					</div>
+
+				</div>				
+				
+			</section>
+
+			<section class="concrete" id="concrete">
+
+				<div class="color">
+					<input type="radio" name="concolor" id="c1" checked>
+					<input type="radio" name="concolor" id="c2">
+					<input type="radio" name="concolor" id="c3">
+					<input type="radio" name="concolor" id="c4">
+					<div class="imgcolor"></div>				
+					<div class="color-choises">
+						<div class="box-title">
+							<h5>COLOR OPTIONS</h5>			
+						</div>
+						<div class="box-colors">
+							
+							<div class="color1">								
+								<label for="c1" class="labelcolor"></label>
+							</div>
+							<div class="color2">								
+								<label for="c2" class="labelcolor"></label>
+							</div>
+							<div class="color3">								
+								<label for="c3" class="labelcolor"></label>
+							</div>
+							<div class="color4">								
+								<label for="c4" class="labelcolor"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text">
+					<h3>Econcrete</h3>
+					<p>Multi-layer concrete. The first layer made of high-strength concrete provides strength and impermeability to the surface. Followed by a layer of glass-fiber-concrete that offers significant flexural strength. The inner part is filled with a special mixture of concrete and polystyrene grains, which allows it to remove a large part of the weight while maintaining maximum structural strength. All polystyrene used in the production of IARA is recycled from the by-product of constructions and packaging.</p>
+				</div>
+
+				<div class="icons">
+					<div><img src="img/icons_strong.svg" alt="" class="i_strong"><h6>STRONG</h6></div>
+					<div><img src="img/icons_light.svg" alt="" class="i_light"><h6>LIGHT</h6></div>
+					<div><img src="img/icons_eco.svg" alt="" class="i_eco"><h6>ECO</h6></div>
+				</div>				
+				
+			</section>
+
+			<section class="handmade" id="manu">
+				
+				<div class="text">
+
+					<img class="handlogo" src="img/handmade.svg" alt="">
+					<p>Iara is a completely original concept. More than a unique design, each piece is built completely by hand, by just one specialist, which ensures that each unit is absolutely unique. Every little bubble, spot or texture is sought by the artisan like a painting. The instigating design, the high quality surface combined with the harmony in the textures guarantee the product a premium appearance and transform Iara to a work of art.</p>
+					<a href="#" class="box-title" id="boxbt"><h5>ABOUT US</h5></a>
+
+				</div>
+
+				<div class="cards">
+
+					<div class="support">
+						<p><b>Dimensions:</b> 67~100 x 22 x 4 in<br>
+						<b>Weight:</b> 65 kg<br><br>					
+						Surface infiltration treatment;<br>
+						Wall-mount system included;<br>
+						Iara is designed for a wall-mounted basin tap and unslotted waste. These are not included.<br><br><br>
+						<b>Hand made in the Canada</b>
+						</p>
+						<!-- <img src="img/support.png" alt=""> -->
+					</div>
+
+					<div class="downloads">
+						<span class="material-icons">file_download</span>						
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo ad similique impedit ullam perferendis neque ipsam ipsa numquam culpa itaque rem porro, expedita earum enim labore vero aut eligendi odit!</p>
+						<span class="material-icons">description</span>
+					</div>
+
+					<div class="order">
+						<div>
+							<h3>IARA</h3>
+							<br>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, repellat!</p>
+						</div>
+						<br>
+						<div>
+							<div class="box-title price">
+								<h5>33.000 CAD</h5>			
+							</div>
+							<a href="#" class="box-title" id="boxbt">
+								<h5>ORDER</h5>			
+							</a>
+						</div>						
+					</div>
+
+				</div>
+
+			</section>
+
+			<div class="baseboard">
+
+				<div class="logosquare">
+					<img src="img/logo_ton_square.svg" alt="">
+				</div>
+				<div class="adress">
+					<h6>MANUFACTORY</h6>
+					<h5>
+						107 Rue Ayrton<br>
+						Saint-Jean-sur-Richelieu<br>
+						QUEBEC | J7F 1S6<br>
+						Canada
+					</h5>
+				</div>
+				<div class="adress">
+					<h6>SHOWROOM</h6>
+					<h5>
+						107 Rue Ayrton<br>
+						Saint-Jean-sur-Richelieu<br>
+						QUEBEC | J7F 1S6<br>
+						Canada
+					</h5>
+				</div>
+				<div class="contact">
+					<h6>+1 762 268 9117</h6>
+					<h4>info@tondesign.com</h4>
+					<div class="social">
+						<img src="img/icon_linkedin_white.svg" alt="">
+						<img src="img/icon_youtube_white.svg" alt="">
+						<img src="img/icon_pinterest_white.svg" alt="">
+						<img src="img/icon_instagram_white.svg" alt="">
+						<img src="img/icon_facebook_white.svg" alt="">
+					</div>
+					<div class="copyright">2022 © TON | CONCRETE DESIGN</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+
+	</body>
+</html>
