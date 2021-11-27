@@ -1,5 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,500;1,700&family=Reem+Kufi:wght@400;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;800&family=Playfair+Display:ital,wght@0,400;0,800;1,400;1,800&family=Reem+Kufi:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&family=Playfair+Display:ital,wght@0,400;0,800;1,400;1,800&family=Reem+Kufi:wght@400;700&display=swap');
 
 ::-webkit-scrollbar {
     width: 1em;
@@ -111,7 +111,7 @@ h6{
 
 p{
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: normal;
     line-height: 180%;
@@ -140,6 +140,10 @@ p{
 
     /* Support for IE. */
     font-feature-settings: 'liga';
+}
+
+.st0{
+    fill:var(--mediumdarkgray);
 }
 
 .box-title{
@@ -672,17 +676,15 @@ p{
     flex-flow: column;
     z-index: -2;
 }
-
 .product-dimensions div{
     text-align: center;  
     margin: 0px auto;
 }
-
 .product-dimensions .text{
     max-width: 720px;
     padding: 5em; 
+    color: var(--mediumdarkgray);
 }
-
 .product-dimensions .imgfront{
     position: relative;
     width: 100%;
@@ -696,16 +698,17 @@ p{
     background-size: cover;
     margin-bottom: 7em;
 }
-
 .dimensions{
     display: block;
-    font-family: 'Reem Kufi', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
     font-size: 1.6em;
     color: var(--mediumgray);
     position: absolute;
     width: 100%;
     top: 50%;
     line-height: 3em;
+    z-index: -1;
 }
 
 .ghost-btn{
@@ -919,6 +922,9 @@ p{
     justify-content: center;
     scroll-snap-align: start end;
 }
+.handmade #id{
+    font-weight: 500;
+}
 .handmade .text{
     text-align: center;
 }
@@ -947,7 +953,15 @@ p{
     max-width: 850px;
 }
 .handmade .cards p{
-    font-family: 'Outfit', serif;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.handmade .cards ul{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding-left: 1.5em;
 }
 .handmade .cards .support, .downloads, .order{
     /* background-color: var(--lightgray); */
@@ -963,6 +977,30 @@ p{
 }
 .handmade .cards .support{
     text-align: left;
+}
+.handmade .cards .downloads .files{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+}
+.handmade .cards .downloads .files a{
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    color: var(--mediumdarkgray);
+    text-decoration: none;
+    font-size: 1.0rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 50ms cubic-bezier(0.600, 0.000, 0.000, 0.600);
+}
+.handmade .cards .downloads .files a:hover{
+    /* color: var(--mediumgray); */
+    transform: scale(1.1);
+    font-weight: 700;
+}
+.handmade .cards .downloads .files .material-icons{
+    font-size: 3.0rem;
 }
 .handmade .cards .box-title{
     width: 100%;
