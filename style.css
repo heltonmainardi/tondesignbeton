@@ -956,6 +956,7 @@ p{
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 1.3rem;
+    line-height: 2rem;
 }
 .handmade .cards ul{
     font-family: 'Outfit', sans-serif;
@@ -993,6 +994,9 @@ p{
     font-weight: 500;
     text-transform: uppercase;
     transition: all 50ms cubic-bezier(0.600, 0.000, 0.000, 0.600);
+}
+.handmade .cards .order a{
+    color: var(--mediumdarkgray);
 }
 .handmade .cards .downloads .files a:hover{
     /* color: var(--mediumgray); */
